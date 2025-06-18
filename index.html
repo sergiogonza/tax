@@ -58,18 +58,32 @@
       </p>
     </div>
 
-    <div class="cta">
-      <button>
-        Get a Free Consultation
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
-    </div>
-
+ <!-- Tu botón -->
+<div class="cta">
+  <button onclick="requestPassword()">
+    Get a Free E-book
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+    
     <div class="slider">
       <i class="fa-solid fa-chevron-left"></i>
       <i class="fa-solid fa-chevron-right"></i>
     </div>
   </div>
+
+  <!-- Script para el popup -->
+<script>
+  function requestPassword() {
+    const password = prompt("Enter the password to download your free e-book:");
+    if (password === "FREEBOOK") {
+      window.location.href = "https://cdn.glitch.global/15032796-b987-4486-a6b6-64571db0b4cf/THENORTHTAXGROUP.pdf?v=1750284569222";
+    } else if (password !== null) {
+      alert("Incorrect password. Please try again.");
+    }
+  }
+</script>
+  
 
   <script>
     function setVh() {
