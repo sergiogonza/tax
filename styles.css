@@ -6,14 +6,17 @@
   border: none;
   outline: none;
   font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   background-image: url(img/bac\ 4.png);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body::after {
@@ -27,6 +30,12 @@ body::after {
 }
 
 /* Background-images */
+.content {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 
 .content img {
   position: absolute;
@@ -90,7 +99,6 @@ nav:hover > a:not(:hover) {
   top: 40%;
   right: 50%;
   transform: translate(50%, -50%);
-  
 }
 
 .title h3 {
@@ -161,7 +169,7 @@ p {
 
 .cta button:hover {
   background-color: rgba(255, 255, 255, 0.8);
-  color:rgb(53, 53, 53);
+  color: rgb(53, 53, 53);
 }
 
 .slider {
@@ -171,6 +179,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 .slider i {
   padding: 0 5%;
   font-size: 36px;
@@ -257,7 +266,7 @@ nav {
   animation: topIn 1.2s ease-out forwards;
 }
 
-@keyframes zoomOut{
+@keyframes zoomOut {
   from {
     transform: scale(1.5);
     opacity: 0;
@@ -270,4 +279,106 @@ nav {
 
 .slider {
   animation: zoomOut 1.2s ease-out forwards;
+}
+
+/* Tablet & small screen */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .title h3 {
+    font-size: 1rem;
+    letter-spacing: 5px;
+  }
+
+  .cta button {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 14px;
+    width: auto;
+    padding: 10px;
+  }
+
+  p {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .slider i {
+    font-size: 28px;
+  }
+
+  .content img {
+    width: 100%;
+    bottom: -5%;
+  }
+
+  .info-wrap {
+    bottom: 25%;
+  }
+
+  .cta {
+    bottom: 10%;
+  }
+
+  .title {
+    top: 35%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+/* Extra small screen fix (e.g., 309px wide) */
+@media (max-width: 320px) {
+  .title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .title h3 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-wrap {
+    bottom: 22%;
+    padding: 0 10px;
+  }
+
+  .cta button {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+    bottom: -10%;
+  }
+
+  p {
+    width: 90%;
+    font-size: 11px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .slider i {
+    font-size: 24px;
+  }
 }

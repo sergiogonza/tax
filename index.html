@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   <title>The North Tax Group</title>
 
   <!-- FontAwesome for icons -->
@@ -31,8 +33,9 @@
       <h1>The North Tax Group</h1>
     </div>
 
-    <img src="img/background-overlay.png" alt="Overlay" class="back-2" />
-    <img src="img/background-bottom.png" alt="Bottom Background" class="back-1" />
+
+      <img src="img/background-overlay.png" alt="Overlay" class="back-2" />
+      <img src="img/background-bottom.png" alt="Bottom Background" class="back-1" />
 
     <div class="info-wrap">
       <p>
@@ -52,6 +55,16 @@
       <i class="fa-solid fa-chevron-right"></i>
     </div>
   </div>
+
+  <script>
+    function setVh() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    window.addEventListener('load', setVh);
+    window.addEventListener('resize', setVh);
+  </script>
+
 
 </body>
 </html>
