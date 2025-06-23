@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | North Tax Group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    .resources-header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      color: white;
+    }
+
+    .resources-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      color: white;
+    }
+
+    .resource-block {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    .resource-block h3 {
+      color: #f1c40f;
+      margin-bottom: 1rem;
+    }
+
+    .resource-block p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .resource-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #f1c40f;
+      text-decoration: underline;
+    }
+
+    .video-wrapper, .guide-img {
+      margin-top: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .guide-img img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a class="nav-items" href="index.html">Home</a>
+      <a class="nav-items" href="services.html">Services</a>
+      <a class="nav-items" href="about.html">About</a>
+      <a class="nav-items active" href="resources.html">Resources</a>
+      <a class="nav-items" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="resources-header">
+      <h1>Free Tax Resources & Guidance</h1>
+      <p>Expert advice and tools to help you stay informed and prepared.</p>
+    </div>
+
+    <section class="resources-section">
+      <div class="resource-block">
+        <h3>📘 Tax Relief eBook</h3>
+        <p>Download our free eBook and learn the most effective ways to deal with tax debt and avoid penalties.</p>
+        <a class="resource-link" href="/ebook.pdf" target="_blank">Download PDF</a>
+      </div>
+
+      <div class="resource-block">
+        <h3>🎥 Video: Understanding IRS Letters</h3>
+        <p>Watch our expert explain how to interpret and respond to IRS collection notices.</p>
+        <div class="video-wrapper">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="IRS Letters" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="resource-block">
+        <h3>🧮 IRS Payment Plan Calculator</h3>
+        <p>Use our calculator to estimate what your monthly IRS payment might look like based on your debt and income.</p>
+        <a class="resource-link" href="/calculator.html">Try the Calculator</a>
+      </div>
+
+      <div class="resource-block">
+        <h3>📊 Annual Taxpayer Guide 2025</h3>
+        <p>A complete and updated guide to understanding IRS programs, common deductions, and taxpayer rights.</p>
+        <div class="guide-img">
+          <img src="https://source.unsplash.com/800x400/?tax,finance" alt="Taxpayer Guide Cover">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>North Tax Group</h3>
+        <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
+        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
+        <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".resource-block").forEach((block, i) => {
+      gsap.from(block, {
+        opacity: 0,
+        y: 50,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: block,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+  </script>
+</body>
+</html>
