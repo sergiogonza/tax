@@ -3,156 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | North Tax Group</title>
+  <title>About Us | North Tax Group</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
+      background-image: url('img/bac 4.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       font-family: 'Inter', sans-serif;
-      background: url('img/bac 4.png') no-repeat center center/cover;
       margin: 0;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 1rem;
-      backdrop-filter: blur(5px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: #f1f1f1;
-      padding: 10px 20px;
-      border-radius: 30px;
-    }
-
-    nav a.active,
-    nav a:hover {
-      background-color: #16423c;
-      color: #fff;
+      padding: 0;
+      color: white;
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
+      padding: 4rem 1rem;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .module {
-      margin-bottom: 6rem;
-      display: flex;
-      align-items: center;
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #f1f1f1;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .module.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .module img {
-      max-width: 500px;
+    .about-grid img {
       width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .about-grid div {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .team-section {
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .member-card {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      width: 250px;
+      text-align: center;
     }
 
-    .module .text {
-      flex: 1;
-    }
-
-    .module h2 {
-      color: #f1c40f;
+    .member-card img {
+      width: 100%;
+      border-radius: 50%;
       margin-bottom: 1rem;
     }
 
-    .module p {
-      color: #eee;
-      line-height: 1.6;
+    .member-card h4 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .mission-section {
+      margin-top: 4rem;
+      background-color: rgba(22, 66, 60, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
     }
 
     footer {
       background-color: #111;
       color: #f1f1f1;
       padding: 40px 20px;
+      font-family: sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-about, .footer-contact, .footer-social {
+      flex: 1 1 250px;
+    }
+
+    .footer-bottom {
       text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
+<header>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html" class="active">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
+    <a class="nav-items" href="index.html">Home</a>
+    <a class="nav-items" href="services.html">Services</a>
+    <a class="nav-items active" href="about.html">About</a>
+    <a class="nav-items" href="resources.html">Resources</a>
+    <a class="nav-items" href="contact.html">Contact</a>
   </nav>
+</header>
 
-  <section class="module" id="mission">
-    <div class="text">
-      <h2>Our Mission</h2>
-      <p>At North Tax Group, our mission is to empower individuals and businesses by offering professional tax relief services. We believe everyone deserves peace of mind when it comes to their financial future.</p>
-    </div>
-    <img src="https://source.unsplash.com/600x400/?office,team" alt="Team at work">
-  </section>
-
-  <section class="module reverse" id="team">
-    <img src="https://source.unsplash.com/600x400/?people,collaboration" alt="Team members">
-    <div class="text">
-      <h2>Meet Our Team</h2>
-      <p>We're a diverse group of licensed tax professionals, attorneys, and support staff dedicated to providing top-tier client service and resolutions that work.</p>
+<main>
+  <section>
+    <h2 class="section-title">Who We Are</h2>
+    <div class="about-grid">
+      <img src="https://source.unsplash.com/600x400/?office,teamwork" alt="Our Team">
+      <div>
+        <p>North Tax Group is a trusted team of professionals with deep expertise in IRS representation and tax relief services. Founded with a mission to help individuals and businesses achieve financial clarity and peace of mind, we’ve resolved countless tax issues across the nation.</p>
+      </div>
     </div>
   </section>
 
-  <section class="module" id="approach">
-    <div class="text">
-      <h2>Our Approach</h2>
-      <p>We listen. We analyze. We solve. From the first consultation to the final resolution, our process is built around your needs. We pride ourselves on transparency and empathy.</p>
-    </div>
-    <img src="https://source.unsplash.com/600x400/?strategy,planning" alt="Planning session">
+  <section class="mission-section">
+    <h2 class="section-title">Our Mission</h2>
+    <p style="text-align:center; max-width: 900px; margin:auto;">We are committed to helping individuals and small businesses regain control over their financial situations. With over 15 years of experience, our goal is to guide clients through their tax challenges with integrity, empathy, and results-driven strategies.</p>
   </section>
 
-  <section class="module reverse" id="impact">
-    <img src="https://source.unsplash.com/600x400/?success,clients" alt="Happy clients">
-    <div class="text">
-      <h2>Our Impact</h2>
-      <p>We’ve helped thousands of clients reduce their tax debt, avoid garnishments, and restore peace of mind. Our results speak louder than words.</p>
+  <section class="team-section">
+    <h2 class="section-title">Meet Our Team</h2>
+    <div class="team-members">
+      <div class="member-card">
+        <img src="https://source.unsplash.com/200x200/?portrait,man" alt="Team Member">
+        <h4>John Ramirez</h4>
+        <p>Senior Tax Consultant</p>
+      </div>
+      <div class="member-card">
+        <img src="https://source.unsplash.com/200x200/?portrait,woman" alt="Team Member">
+        <h4>Maria Lopez</h4>
+        <p>IRS Negotiation Specialist</p>
+      </div>
+      <div class="member-card">
+        <img src="https://source.unsplash.com/200x200/?portrait,business" alt="Team Member">
+        <h4>Anthony Green</h4>
+        <p>Compliance Advisor</p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 North Tax Group. All rights reserved.</p>
-  </footer>
+  <section>
+    <h2 class="section-title">Why Choose North Tax Group?</h2>
+    <div class="about-grid">
+      <img src="https://source.unsplash.com/600x400/?tax,documents" alt="Why Choose Us">
+      <div>
+        <p>We are proud to say that 90% of our clients rate us 5 stars. We value transparency, dedication, and consistent communication. Whether it’s negotiating with the IRS or advising on financial decisions, we stand by our clients at every step.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>North Tax Group</h3>
+      <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias. Atendemos con profesionalismo y compromiso en cada caso.</p>
+    </div>
 
-    gsap.utils.toArray(".module").forEach((section, i) => {
-      gsap.from(section, {
-        opacity: 0,
-        y: 80,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          toggleActions: "play none none none"
-        }
-      });
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+      <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+      <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
+      <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
+      <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray("section").forEach(section => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
