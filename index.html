@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 
+
+
+  <!-- REVIEWS SECTION WITH SWIPER.JS -->
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+  
   <!-- Pixels -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BP23B15XH9"></script>
   <script>
@@ -115,6 +122,67 @@ src="https://www.facebook.com/tr?id=714520564658839&ev=PageView&noscript=1"
       </p>
     </div>
 
+
+
+
+
+<section class="reviews-section">
+  <h2 class="section-title">Excellent Service Rated 4.8/5</h2>
+  <p class="section-subtitle">Based on 370 verified client reviews</p>
+
+  <!-- Swiper -->
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide review-card">
+        <h3>Janie Chavez – April 11</h3>
+        <p>
+          My wife and I both used Tax Defense for all of our tax needs. Their team took care of everything – very friendly and informative. We wouldn’t use anyone else. Thanks, Tax Defense Group!
+        </p>
+      </div>
+
+      <div class="swiper-slide review-card">
+        <h3>Carlos Bonilla – October 10</h3>
+        <p>
+          Muy agradecido con Tax Defense Group, especialmente con Jorge Rodriguez. Siempre atento y profesional. Me ayudaron con varios años sin declarar impuestos. ¡100% recomendados!
+        </p>
+      </div>
+
+      <div class="swiper-slide review-card">
+        <h3>Joaquin Arias – June 6</h3>
+        <p>
+          Thanks to Diana and the team for resolving my father’s IRS debt. They were kind, professional, and effective. Highly recommended!
+        </p>
+      </div>
+
+      <div class="swiper-slide review-card">
+        <h3>Sandra Martinez – March 29</h3>
+        <p>
+          Muy contenta con el servicio. Me hicieron una buena oferta y quitaron un gran estrés de encima. Ahora puedo vivir tranquila. ¡Recomendados!
+        </p>
+      </div>
+
+      <div class="swiper-slide review-card">
+        <h3>Elaine Perna – February 27</h3>
+        <p>
+          They handled my husband’s case professionally. Ann worked hard for a great IRS settlement. I now use them every year. Thank you!
+        </p>
+      </div>
+
+    </div>
+    <!-- Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="cta">
+    <a href="#contact" class="cta-button">Get Your Free Consultation</a>
+  </div>
+</section>
+
+  
+  
+
     <div class="cta">
       <button onclick="requestPassword()">
         Get a Free E-book
@@ -128,6 +196,79 @@ src="https://www.facebook.com/tr?id=714520564658839&ev=PageView&noscript=1"
     </div>
   </div>
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.reviews-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+
+<style>
+.reviews-section {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.section-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+.review-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: left;
+  height: 100%;
+}
+.review-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #222;
+}
+.review-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+.cta-button {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #003366;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
+
+
+
+  
   <script>
     function requestPassword() {
       const password = prompt("Enter the password to download your free e-book:");
