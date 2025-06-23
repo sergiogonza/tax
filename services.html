@@ -3,174 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>North Tax Group - Services</title>
+  <title>Services | North Tax Group</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: url('img/bac 4.png');
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url("img/bac 4.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      color: #fff;
+      color: #f1f1f1;
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(6px);
-      padding: 1rem;
+    header {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 10px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }
-
     nav a {
-      color: #353535;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      transition: 0.3s;
+      color: rgb(53, 53, 53);
+      padding: 10px 15px;
       text-decoration: none;
+      font-weight: 600;
+      border-radius: 20px;
     }
-
-    nav a.active, nav a:hover {
+    nav a.active,
+    nav a:hover {
       background-color: #16423c;
       color: white;
     }
-
-    .service-block.cta-service {
-      background-color: #16423c;
-      padding: 2rem;
-      text-align: center;
-      border-radius: 15px;
-      margin: 3rem auto;
-      max-width: 700px;
+    .section {
+      max-width: 1200px;
+      margin: 100px auto 0 auto;
+      padding: 2rem 1rem;
     }
-
-    .service-block.cta-service h3 {
-      font-size: 1.8rem;
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .intro-section img {
+      flex: 1;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .intro-text {
+      flex: 1;
+    }
+    .intro-text h2 {
+      color: #9de4c7;
       margin-bottom: 1rem;
     }
-
-    .service-block.cta-service button {
-      background-color: #a0eec0;
-      color: #003322;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    .intro-text p {
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.8);
     }
-
-    .service-block.cta-service button:hover {
-      background-color: #7bdba5;
-    }
-
-    .slider-wrapper {
+    .slide-wrapper {
       display: flex;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       gap: 1rem;
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
+      scroll-snap-type: x mandatory;
+      margin: 2rem 0;
     }
-
     .slide-card {
-      flex: 0 0 300px;
-      scroll-snap-align: center;
-      background: rgba(22, 66, 60, 0.9);
+      min-width: 300px;
+      background: rgba(22, 66, 60, 0.8);
+      color: #f1f1f1;
       padding: 1.5rem;
       border-radius: 10px;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      scroll-snap-align: start;
+      flex: 0 0 auto;
     }
-
-    .slide-card h4 {
+    .slide-card h3 {
       margin-bottom: 0.5rem;
-      color: #a0eec0;
+      color: #aafad2;
     }
-
-    .slide-card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .slider-buttons {
+    .cta-service {
+      background-color: #16423c;
+      padding: 2rem;
+      border-radius: 10px;
       text-align: center;
-      margin-top: 1rem;
+      margin: 2rem auto;
+      color: white;
     }
-
-    .slider-buttons button {
-      background-color: #a0eec0;
-      color: #003322;
+    .cta-service h3 {
+      margin-bottom: 1rem;
+    }
+    .cta-service button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      background-color: #aafad2;
+      color: #003b2d;
+      font-weight: bold;
       border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.25rem;
-      border-radius: 8px;
-      font-size: 1rem;
       cursor: pointer;
+    }
+    footer {
+      background-color: #111;
+      color: #f1f1f1;
+      padding: 40px 20px;
+      font-family: sans-serif;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-about,
+    .footer-contact,
+    .footer-social {
+      flex: 1 1 250px;
+    }
+    .footer h3,
+    .footer h4 {
+      margin-bottom: 10px;
+    }
+    .footer a {
+      color: #f1f1f1;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <a class="nav-items" href="index.html">Home</a>
+      <a class="nav-items active" href="services.html">Services</a>
+      <a class="nav-items" href="about.html">About</a>
+      <a class="nav-items" href="resources.html">Resources</a>
+      <a class="nav-items" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<nav>
-  <a class="nav-items active" href="index.html">Home</a>
-  <a class="nav-items" href="services.html">Services</a>
-  <a class="nav-items" href="about.html">About</a>
-  <a class="nav-items" href="resources.html">Resources</a>
-  <a class="nav-items" href="contact.html">Contact</a>
-</nav>
-
-<main style="padding-top: 6rem;">
-  <div class="service-block cta-service">
-    <h3>Get Your Free Consultation Today</h3>
-    <button onclick="window.location.href='contact.html'">
-      Schedule Now <i class="fa-solid fa-arrow-right"></i>
-    </button>
-  </div>
-
-  <div class="slider-wrapper">
-    <div class="slide-card">
-      <h4>Step 1: Free Consultation</h4>
-      <p>Call us now to learn how we can help. Speak directly with one of our professionals at 888-373-9385.</p>
+  <main class="section">
+    <div class="intro-section">
+      <img src="https://source.unsplash.com/featured/?tax" alt="Tax help" />
+      <div class="intro-text">
+        <h2>Call or Text 888-373-9385</h2>
+        <p><strong>Call Today!</strong> It's always time to file your taxes!</p>
+        <p><strong>Comprehensive Tax Services:</strong> Expert assistance with tax preparation, negotiation, and IRS installment plans.</p>
+        <p><strong>Resolve Tax Issues:</strong> Navigate tax levies, penalty abatements, and offers in compromise.</p>
+        <p><strong>Protect Your Interests:</strong> Secure top-notch representation for audits and tax disputes.</p>
+        <p><strong>Specialized Relief Solutions:</strong> From innocent spouse relief to payroll tax issues and liens.</p>
+      </div>
     </div>
-    <div class="slide-card">
-      <h4>Step 2: Case Analysis</h4>
-      <p>Once initiated, we contact the IRS directly, review your tax situation, and develop a resolution strategy.</p>
-    </div>
-    <div class="slide-card">
-      <h4>Step 3: Resolution</h4>
-      <p>We negotiate with the IRS to reduce your tax burden and provide long-term support for financial peace of mind.</p>
-    </div>
-    <div class="slide-card">
-      <h4>Why Choose Us?</h4>
-      <p>90%+ of our reviews are 5 stars. We work until you're satisfied. Let us help you stop worrying about tax problems today.</p>
-    </div>
-  </div>
 
-  <div class="slider-buttons">
-    <button onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
-    <button onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</main>
+    <div class="cta-service">
+      <h3>Get Your Free Consultation Today</h3>
+      <button onclick="window.location.href='contact.html'">
+        Schedule Now <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
 
-<script>
-  function scrollSlider(direction) {
-    const wrapper = document.querySelector('.slider-wrapper');
-    wrapper.scrollBy({ left: 320 * direction, behavior: 'smooth' });
-  }
-</script>
+    <div class="slide-wrapper">
+      <div class="slide-card">
+        <h3>Step 1: Free Consultation</h3>
+        <p>Call us now to learn how we can help. Speak directly with one of our professionals at <strong>888-373-9385</strong>.</p>
+      </div>
+      <div class="slide-card">
+        <h3>Step 2: Case Analysis</h3>
+        <p>We contact the IRS directly, review your tax situation, and develop a resolution strategy.</p>
+      </div>
+      <div class="slide-card">
+        <h3>Step 3: Resolution</h3>
+        <p>We negotiate with the IRS to reduce your tax burden and provide long-term support for peace of mind.</p>
+      </div>
+      <div class="slide-card">
+        <h3>Why Choose Us?</h3>
+        <p>90%+ of our reviews are 5 stars. We work until you're satisfied. Let us help you stop worrying today.</p>
+      </div>
+    </div>
 
+    <div class="cta-service">
+      <h3>Resolve Your Tax Balance Now</h3>
+      <p>The Tax Defense Group is a team of well-trained professionals ready to help resolve your tax debt or needs.</p>
+      <p>Start today by calling or texting <strong>888-373-9385</strong>.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>North Tax Group</h3>
+        <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
+        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
+        <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
