@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | North Tax Group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 3rem;
+      background: rgba(0,0,0,0.6);
+      color: white;
+    }
+
+    .contact-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .contact-form, .contact-info {
+      flex: 1 1 350px;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2, .contact-info h2 {
+      margin-bottom: 1rem;
+      color: #16423c;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background: #16423c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    .contact-info i {
+      color: #16423c;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="nav-items" href="index.html">Home</a>
+      <a class="nav-items" href="services.html">Services</a>
+      <a class="nav-items" href="about.html">About</a>
+      <a class="nav-items" href="resources.html">Resources</a>
+      <a class="nav-items active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-hero">
+      <h1>Contact North Tax Group</h1>
+      <p>Have questions or need tax help? Our experts are ready to assist you. Fill out the form or reach out directly!</p>
+    </div>
+
+    <section class="contact-container">
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+        <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM – 5:00 PM</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>North Tax Group</h3>
+        <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
+        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br>
+        <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
