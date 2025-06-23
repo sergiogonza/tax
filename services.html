@@ -6,87 +6,151 @@
   <title>Services | North Tax Group</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .services-section {
+      padding: 2rem 1rem;
+      background: #f9f9f9;
+    }
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .slider-wrapper {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+    .service-card {
+      min-width: 300px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .service-card h2 {
+      color: #003366;
+      margin-bottom: 0.5rem;
+    }
+    .service-card p {
+      margin: 0.3rem 0;
+      line-height: 1.5;
+    }
+    .slider-buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .slider-buttons button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .cta-service {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .cta-service button {
+      background-color: #f1c40f;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .service-card {
+        min-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a class="nav-items" href="index.html">Home</a>
-      <a class="nav-items active" href="services.html">Services</a>
-      <a class="nav-items" href="about.html">About</a>
-      <a class="nav-items" href="resources.html">Resources</a>
-      <a class="nav-items" href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <div class="content">
-    <img src="img/bac 3.png" alt="Background" class="back-3" />
+<header>
+  <nav>
+    <a class="nav-items" href="index.html">Home</a>
+    <a class="nav-items active" href="services.html">Services</a>
+    <a class="nav-items" href="about.html">About</a>
+    <a class="nav-items" href="resources.html">Resources</a>
+    <a class="nav-items" href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <div class="title">
-      <h3>Services That Make a Difference</h3>
-      <h1>Tax Solutions with Real Results</h1>
+<main class="services-section">
+  <h1 style="text-align:center; color:#003366;">Our Services</h1>
+
+  <div class="slider-container">
+    <div class="slider-wrapper" id="slider">
+      <div class="service-card">
+        <h2>Comprehensive Tax Services</h2>
+        <p>Expert assistance with tax preparation, negotiation, and IRS installment plans to keep your finances on track.</p>
+      </div>
+      <div class="service-card">
+        <h2>Resolve Tax Issues</h2>
+        <p>Navigate complex challenges like tax levies, penalty abatements, and offers in compromise with our support team.</p>
+      </div>
+      <div class="service-card">
+        <h2>Protect Your Interests</h2>
+        <p>Secure representation for audits and tax disputes, ensuring your rights are protected every step of the way.</p>
+      </div>
+      <div class="service-card">
+        <h2>Specialized Relief Solutions</h2>
+        <p>We handle innocent spouse relief, payroll tax issues, liens and more — tailored to your financial needs.</p>
+      </div>
+      <div class="service-card">
+        <h2>Step 1: Free Consultation</h2>
+        <p>Call us now to learn how we can help. Speak directly with one of our professionals at <strong>888-373-9385</strong>.</p>
+      </div>
+      <div class="service-card">
+        <h2>Step 2: Case Analysis</h2>
+        <p>We contact the IRS, review your tax case in detail, and build a strategy that works for you.</p>
+      </div>
+      <div class="service-card">
+        <h2>Step 3: Resolution</h2>
+        <p>We negotiate on your behalf to reduce your debt and provide lasting support for peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <h2>Why Choose Us?</h2>
+        <p>Over 90% of our reviews are 5 stars. We fight for you until you're satisfied. Stop worrying — we’ve got you covered.</p>
+      </div>
     </div>
-
-    <img src="img/bac 2.png" alt="Overlay" class="back-2" />
-    <img src="img/bac 1.png" alt="Bottom Background" class="back-1" />
-
-    <section class="info-wrap">
-      <p>
-        We offer a wide range of specialized services designed to resolve your tax issues with the IRS and state agencies. Our experienced advisors work closely with you to craft tailored strategies, whether you're dealing with audits, collections, or debt settlements.
-      </p>
-    </section>
-
-    <section class="services-section">
-      <div class="service">
-        <h2>IRS Tax Representation</h2>
-        <p>Full-service representation in audits, disputes, and negotiations with the IRS to protect your financial interests.</p>
-      </div>
-      <div class="service">
-        <h2>Tax Fraud & Criminal Defense</h2>
-        <p>Expert defense if you are under investigation for tax evasion, fraud, or other criminal tax matters.</p>
-      </div>
-      <div class="service">
-        <h2>Levy & Lien Removal</h2>
-        <p>Remove or prevent tax liens and levies that put your assets at risk.</p>
-      </div>
-      <div class="service">
-        <h2>Debt Relief & Settlements</h2>
-        <p>Negotiate Offers in Compromise, Installment Agreements, and Penalty Abatement to reduce your tax burden.</p>
-      </div>
-      <div class="service">
-        <h2>Business & Payroll Tax Help</h2>
-        <p>Solutions for companies facing payroll tax problems, late filings, or compliance issues.</p>
-      </div>
-    </section>
-
-    <div class="cta">
-      <button onclick="window.location.href='contact.html'">
-        Free Consultation <i class="fa-solid fa-arrow-right"></i>
-      </button>
+    <div class="slider-buttons">
+      <button onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>North Tax Group</h3>
-        <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias. Atendemos con profesionalismo y compromiso en cada caso.</p>
-      </div>
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
-        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
-        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
-      </div>
-      <div class="footer-social">
-        <h4>Síguenos</h4>
-        <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
-        <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <div class="cta-service">
+    <h3>Resolve Your Tax Balance Now</h3>
+    <p>Get started today and resolve your tax problems from the comfort of your own home.</p>
+    <button onclick="window.location.href='contact.html'">
+      Schedule a Free Consultation <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</main>
+
+<script>
+  function scrollSlider(direction) {
+    const slider = document.getElementById('slider');
+    const scrollAmount = 320;
+    slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
