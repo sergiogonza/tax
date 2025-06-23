@@ -3,73 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>North Tax Group | Services</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>North Tax Group – Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    .services-section, .form-section, .cta-section {
+    .services-section {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
-      padding: 4rem 2rem;
-      align-items: center;
       justify-content: center;
-    }
-
-    .services-section .text, .cta-section .text {
-      flex: 1 1 400px;
+      align-items: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
       color: white;
     }
 
     .services-section img {
-      max-width: 500px;
       width: 100%;
-      border-radius: 15px;
+      max-width: 500px;
+      border-radius: 12px;
     }
 
-    .slider-container {
-      position: relative;
-      overflow: hidden;
-      max-width: 1200px;
-      margin: 2rem auto;
+    .services-text {
+      max-width: 600px;
+      padding: 1.5rem;
+    }
+
+    .services-text h2 {
+      color: #f1c40f;
+      margin-bottom: 1rem;
+    }
+
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+
+    .form-section .form-info {
+      flex: 1;
+      max-width: 600px;
       padding: 1rem;
     }
 
-    .slider-wrapper {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-    }
-
-    .service-card {
-      min-width: 300px;
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      background: rgba(22, 66, 60, 0.8);
-      color: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .service-card h2 {
+    .form-section .form-info h2 {
       color: #f1c40f;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    .form-section iframe {
-      width: 100%;
+    .form-section .form-container {
+      flex: 1;
       max-width: 500px;
-      height: 550px;
-      border: none;
-      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .slider-wrapper .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-service {
+      background: #16423c;
+      color: white;
+    }
+
+    .cta-service button {
+      background-color: #f1c40f;
+      color: #000;
     }
 
     @media (max-width: 768px) {
-      .services-section, .form-section, .cta-section {
+      .services-section,
+      .form-section {
         flex-direction: column;
         text-align: center;
       }
@@ -77,87 +86,105 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a class="nav-items" href="index.html">Home</a>
-      <a class="nav-items active" href="services.html">Services</a>
-      <a class="nav-items" href="about.html">About</a>
-      <a class="nav-items" href="resources.html">Resources</a>
-      <a class="nav-items" href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <div class="services-section">
-      <img src="https://source.unsplash.com/600x400/?tax,finance" alt="Tax Services">
-      <div class="text">
-        <h2>Call or Text 888-373-9385</h2>
-        <h3>Call Today! It's always time to file your taxes!</h3>
-        <p><strong>Comprehensive Tax Services:</strong> Expert assistance with tax preparation, negotiation, and IRS installment plans to keep your finances on track.</p>
-        <p><strong>Resolve Tax Issues:</strong> Navigate complex challenges like tax levies, penalty abatements, and offers in compromise with our professional support.</p>
-        <p><strong>Protect Your Interests:</strong> Secure top-notch representation for audits and tax disputes, ensuring your rights are upheld at every step.</p>
-        <p><strong>Specialized Relief Solutions:</strong> From innocent spouse relief to resolving payroll tax issues and liens, we tailor solutions to your unique financial needs.</p>
+<header>
+  <nav>
+    <a class="nav-items" href="index.html">Home</a>
+    <a class="nav-items active" href="services.html">Services</a>
+    <a class="nav-items" href="about.html">About</a>
+    <a class="nav-items" href="resources.html">Resources</a>
+    <a class="nav-items" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="services-section">
+    <div style="flex: 1; max-width: 500px;">
+      <img src="https://source.unsplash.com/featured/?tax,finance" alt="Tax Services">
+    </div>
+    <div class="services-text">
+      <h2>Call or Text 888-373-9385</h2>
+      <p><strong>Call Today!</strong> It's always time to file your taxes!</p>
+      <p><strong>Comprehensive Tax Services:</strong> Expert assistance with tax preparation, negotiation, and IRS installment plans to keep your finances on track.</p>
+      <p><strong>Resolve Tax Issues:</strong> Navigate complex challenges like tax levies, penalty abatements, and offers in compromise with our professional support.</p>
+      <p><strong>Protect Your Interests:</strong> Secure top-notch representation for audits and tax disputes, ensuring your rights are upheld at every step.</p>
+      <p><strong>Specialized Relief Solutions:</strong> From innocent spouse relief to resolving payroll tax issues and liens, we tailor solutions to your unique financial needs.</p>
+    </div>
+  </section>
+
+  <section class="slider-container">
+    <div class="slider-wrapper" id="slider">
+      <div class="service-card">
+        <h2>Step 1: Free Consultation</h2>
+        <p>Call us now to learn how we can help. Speak directly with one of our professionals at <strong>888-373-9385</strong>.</p>
+      </div>
+      <div class="service-card">
+        <h2>Step 2: Case Analysis</h2>
+        <p>Once initiated, we contact the IRS directly, review your tax situation, and develop a resolution strategy.</p>
+      </div>
+      <div class="service-card">
+        <h2>Step 3: Resolution</h2>
+        <p>We negotiate with the IRS to reduce your tax burden and provide long-term support for financial peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <h2>Why Choose Us?</h2>
+        <p>90%+ of our reviews are 5 stars. We work until you're satisfied. Let us help you stop worrying about tax problems today.</p>
       </div>
     </div>
-
-    <div class="slider-container">
-      <div class="slider-wrapper">
-        <div class="service-card">
-          <h2>Step 1: Free Consultation</h2>
-          <p>Call us now to learn how we can help. Speak directly with one of our professionals at <strong>888-373-9385</strong>.</p>
-        </div>
-        <div class="service-card">
-          <h2>Step 2: Case Analysis</h2>
-          <p>Once initiated, we contact the IRS directly, review your tax situation, and develop a resolution strategy.</p>
-        </div>
-        <div class="service-card">
-          <h2>Step 3: Resolution</h2>
-          <p>We negotiate with the IRS to reduce your tax burden and provide long-term support for financial peace of mind.</p>
-        </div>
-        <div class="service-card">
-          <h2>Why Choose Us?</h2>
-          <p>90%+ of our reviews are 5 stars. We work until you're satisfied. Let us help you stop worrying about tax problems today.</p>
-        </div>
-      </div>
+    <div class="slider-buttons">
+      <button onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
+  </section>
 
-    <div class="cta-section">
-      <div class="text">
-        <h2>Resolve Your Tax Balance Now</h2>
-        <p>Get started today and resolve your tax problems from the comfort of your own home.</p>
-        <p>The Tax Defense Group is a team of well-trained and educated professionals ready to take care of all your tax needs. We care about our clients and will do whatever it takes to help resolve their tax debt or help them with their tax needs. Our professionals are ready to help with tax preparation, tax audits, resolving tax debt, and more! If you need help resolving your taxes, resolution can begin by taking one small step.</p>
-      </div>
-      <div class="form-section">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd7HkYbSBl0B13VNjDdqyM0w9UdbbyBrZ2Wh5M6Pd7Fug7gTg/viewform?embedded=true" allowfullscreen></iframe>
-      </div>
+  <section class="form-section">
+    <div class="form-info">
+      <h2>Resolve Your Tax Balance Now</h2>
+      <p>Get started today and resolve your tax problems from the comfort of your own home.</p>
+      <p>The North Tax Group is a team of well-trained and educated professionals ready to take care of all your tax needs. We care about our clients and will do whatever it takes to help resolve their tax debt or assist them with tax needs.</p>
     </div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>North Tax Group</h3>
-        <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias. Atendemos con profesionalismo y compromiso en cada caso.</p>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-        <p><i class="fas fa-phone"></i> (844) 983-0803</p>
-        <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
-        <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
-      </div>
-
-      <div class="footer-social">
-        <h4>Síguenos</h4>
-        <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
-        <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-      </div>
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_example/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+  <div class="cta-service">
+    <h3>Start Your Resolution Today</h3>
+    <p>We're ready when you are. Start by calling or texting <strong>888-373-9385</strong>.</p>
+    <button onclick="window.location.href='contact.html'">Schedule Now <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>North Tax Group</h3>
+      <p>Expertos en representación ante el IRS, alivio fiscal y soluciones para deudas tributarias. Atendemos con profesionalismo y compromiso en cada caso.</p>
     </div>
-  </footer>
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+      <p><i class="fas fa-phone"></i> (844) 983-0803</p>
+      <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 AM – 5:00 PM</p>
+      <p><i class="fas fa-envelope"></i> contacto@northtaxgroup.com</p>
+    </div>
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <a href="https://www.instagram.com/northtaxgroup/" target="_blank"><i class="fab fa-instagram"></i> @northtaxgroup</a><br>
+      <a href="https://www.facebook.com/profile.php?id=61577144507562" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 North Tax Group. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  function scrollSlider(direction) {
+    const slider = document.getElementById('slider');
+    const scrollAmount = 320;
+    slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
