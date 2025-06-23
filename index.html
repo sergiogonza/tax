@@ -13,7 +13,7 @@
 <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 
-  
+
   <!-- Pixels -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BP23B15XH9"></script>
   <script>
@@ -83,6 +83,38 @@ src="https://www.facebook.com/tr?id=714520564658839&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+
+
+<style>
+  .reviews-section {
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  .review-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  .review-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .review-stars {
+    color: #f6b800;
+    margin-bottom: 0.5rem;
+  }
+  .review-meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.75rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #333;
+  }
+</style>
+  
   
 </head>
 <body>
@@ -148,126 +180,79 @@ src="https://www.facebook.com/tr?id=714520564658839&ev=PageView&noscript=1"
 
 
 
-  <section class="reviews-section">
-  <h2 class="section-title">Excellent Service Rated 4.8/5</h2>
-  <p class="section-subtitle">Based on 370 verified client reviews</p>
-
-  <!-- Swiper -->
-  <div class="swiper reviews-slider">
+  <div class="reviews-section">
+  <h2 style="text-align: center; margin-bottom: 2rem;">Client Reviews</h2>
+  <div class="swiper reviewsSwiper">
     <div class="swiper-wrapper">
-
-      <div class="swiper-slide review-card">
-        <h3>Janie Chavez – April 11</h3>
-        <p>
-          My wife and I both used Tax Defense for all of our tax needs. Their team took care of everything – very friendly and informative. We wouldn’t use anyone else. Thanks, Tax Defense Group!
-        </p>
+      <div class="swiper-slide">
+        <div class="review-card">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <div class="review-header">Customer service</div>
+          <div class="review-meta">Sanji S, December 11</div>
+          <div class="review-text">
+            Customer service, friendliness, and easy-to-understand explanations is a great way to convey why these guys are better than anyone else you could hire.
+          </div>
+        </div>
       </div>
-
-      <div class="swiper-slide review-card">
-        <h3>Carlos Bonilla – October 10</h3>
-        <p>
-          Muy agradecido con Tax Defense Group, especialmente con Jorge Rodriguez. Siempre atento y profesional. Me ayudaron con varios años sin declarar impuestos. ¡100% recomendados!
-        </p>
+      <div class="swiper-slide">
+        <div class="review-card">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <div class="review-header">Estoy muy contenta</div>
+          <div class="review-meta">Sandra Martinez, March 29</div>
+          <div class="review-text">
+            Me lograron hacer una buena oferta y el equipo de trabajo muy amable. Me han quitado el stress grande que tenía. Los recomiendo.
+          </div>
+        </div>
       </div>
-
-      <div class="swiper-slide review-card">
-        <h3>Joaquin Arias – June 6</h3>
-        <p>
-          Thanks to Diana and the team for resolving my father’s IRS debt. They were kind, professional, and effective. Highly recommended!
-        </p>
+      <div class="swiper-slide">
+        <div class="review-card">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <div class="review-header">Great experience</div>
+          <div class="review-meta">Derek Di Pippo, April 23</div>
+          <div class="review-text">
+            Matt and Marta helped me with the filing process. Everything went smooth and easy, no stress or hassle. 10/10 would recommend.
+          </div>
+        </div>
       </div>
-
-      <div class="swiper-slide review-card">
-        <h3>Sandra Martinez – March 29</h3>
-        <p>
-          Muy contenta con el servicio. Me hicieron una buena oferta y quitaron un gran estrés de encima. Ahora puedo vivir tranquila. ¡Recomendados!
-        </p>
-      </div>
-
-      <div class="swiper-slide review-card">
-        <h3>Elaine Perna – February 27</h3>
-        <p>
-          They handled my husband’s case professionally. Ann worked hard for a great IRS settlement. I now use them every year. Thank you!
-        </p>
-      </div>
-
+      <!-- Add more slides here -->
     </div>
-    <!-- Arrows -->
-    <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-
+</div>
 
 
   
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  const swiper = new Swiper('.reviews-slider', {
+  const swiper = new Swiper(".reviewsSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      640: {
-        slidesPerView: 1
-      },
       768: {
-        slidesPerView: 2
+        slidesPerView: 2,
       },
       1024: {
-        slidesPerView: 3
-      }
-    }
+        slidesPerView: 3,
+      },
+    },
   });
 </script>
 
-<style>
-.reviews-section {
-  padding: 2rem;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.section-subtitle {
-  color: #666;
-  margin-bottom: 2rem;
-}
-.review-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  text-align: left;
-  height: 100%;
-}
-.review-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: #222;
-}
-.review-card p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #444;
-}
-.cta-button {
-  margin-top: 2rem;
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #003366;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-</style>
+  
 
 
 
