@@ -28,6 +28,104 @@ body::after {
   pointer-events: none;
 }
 
+
+
+
+
+
+
+/* GENERAL RESPONSIVE STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Ensure container scales on mobile */
+.content, .info-wrap, .info-module {
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Slider responsiveness */
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+.slide {
+  display: none;
+  max-width: 100%;
+  text-align: center;
+}
+.slide.active {
+  display: block;
+}
+
+/* Arrows positioning */
+.slider i {
+  font-size: 24px;
+  color: #333;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Buttons */
+button.cta {
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  padding: 12px;
+}
+
+/* Responsive overrides */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 1.8rem;
+  }
+
+  .title h3 {
+    font-size: 1rem;
+  }
+
+  .info-wrap, .info-module {
+    font-size: 0.95rem;
+  }
+
+  .slider i {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .slide h3 {
+    font-size: 1.2rem;
+  }
+
+  .slide p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Background-images */
 .content {
   position: relative;
