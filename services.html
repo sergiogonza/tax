@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services | North Tax Group</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --primary-green: #0e5f4f;
+      --secondary-green: #1b3d35;
+      --background-green: #eaf5f1;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,11 +20,11 @@
       color: #222;
     }
 
-    header nav {
+    nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: #14532d;
+      background-color: var(--primary-green);
       padding: 1rem;
       position: sticky;
       top: 0;
@@ -34,15 +41,22 @@
       text-decoration: underline;
     }
 
-    main {
-      padding: 6rem 1rem 2rem 1rem;
+    .service-section {
+      padding: 8rem 1rem 2rem;
+      background: url('img/bac\ 3.png') no-repeat center top;
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-green);
     }
 
     .slider-container {
       position: relative;
       overflow: hidden;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 1100px;
+      margin: 2rem auto;
     }
 
     .slider-wrapper {
@@ -58,41 +72,40 @@
       min-width: 300px;
       flex: 0 0 auto;
       scroll-snap-align: start;
-      background: #1e3a2f;
-      color: white;
+      background: var(--background-green);
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     .service-card h2 {
-      color: #bbf7d0;
+      color: var(--primary-green);
       margin-bottom: 0.5rem;
     }
 
     .service-card p {
       margin: 0.3rem 0;
       line-height: 1.5;
+      color: var(--secondary-green);
     }
 
     .cta-service {
-      background: #14532d;
+      background: var(--primary-green);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
       border-radius: 10px;
-      margin-top: 2rem;
+      margin: 3rem auto;
+      max-width: 1000px;
     }
 
     .cta-service button {
-      background-color: #bbf7d0;
-      color: #14532d;
+      background-color: #f1c40f;
       border: none;
       padding: 12px 24px;
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
-      font-weight: bold;
     }
 
     .slider-buttons {
@@ -101,7 +114,7 @@
     }
 
     .slider-buttons button {
-      background: #14532d;
+      background: var(--primary-green);
       color: white;
       border: none;
       padding: 0.5rem 1rem;
@@ -111,83 +124,67 @@
       cursor: pointer;
     }
 
+    footer {
+      background: #1c1c1c;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
     @media (max-width: 600px) {
       .service-card {
         min-width: 90%;
       }
     }
-
-    footer {
-      background-color: #14532d;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
-
-    footer p {
-      margin: 0;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a class="nav-items" href="index.html">Home</a>
-      <a class="nav-items active" href="services.html">Services</a>
-      <a class="nav-items" href="#">About</a>
-      <a class="nav-items" href="#">Resources</a>
-      <a class="nav-items" href="#">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a class="nav-items" href="index.html">Home</a>
+    <a class="nav-items active" href="services.html">Services</a>
+    <a class="nav-items" href="about.html">About</a>
+    <a class="nav-items" href="resources.html">Resources</a>
+    <a class="nav-items" href="contact.html">Contact</a>
+  </nav>
 
-  <main>
-    <h1 style="text-align:center; color:#14532d;">Our Services</h1>
-
+  <section class="service-section">
+    <h1>Our Services</h1>
     <div class="slider-container">
       <div class="slider-wrapper" id="slider">
         <div class="service-card">
           <h2>Comprehensive Tax Services</h2>
           <p>Expert assistance with tax preparation, negotiation, and IRS installment plans to keep your finances on track.</p>
         </div>
-
         <div class="service-card">
           <h2>Resolve Tax Issues</h2>
           <p>We help navigate complex challenges like tax levies, penalty abatements, and offers in compromise with our professional support team.</p>
         </div>
-
         <div class="service-card">
           <h2>Protect Your Interests</h2>
           <p>Secure top-notch representation for audits and tax disputes, ensuring your rights are upheld every step of the way.</p>
         </div>
-
         <div class="service-card">
           <h2>Specialized Relief Solutions</h2>
           <p>From innocent spouse relief to payroll tax issues and liens, we tailor solutions to your unique financial needs.</p>
         </div>
-
         <div class="service-card">
           <h2>Step 1: Free Consultation</h2>
           <p>Call us now to learn how we can help. Speak directly with one of our professionals at <strong>888-373-9385</strong>.</p>
         </div>
-
         <div class="service-card">
           <h2>Step 2: Case Analysis</h2>
           <p>Once initiated, we contact the IRS directly, review your tax situation, and develop a resolution strategy.</p>
         </div>
-
         <div class="service-card">
           <h2>Step 3: Resolution</h2>
           <p>We negotiate with the IRS to reduce your tax burden and provide long-term support for financial peace of mind.</p>
         </div>
-
         <div class="service-card">
           <h2>Why Choose Us?</h2>
           <p>90%+ of our reviews are 5 stars. We work until you're satisfied. Let us help you stop worrying about tax problems today.</p>
         </div>
       </div>
-
       <div class="slider-buttons">
         <button onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
         <button onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
@@ -201,7 +198,7 @@
         Schedule a Free Consultation <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
-  </main>
+  </section>
 
   <footer>
     <p>&copy; 2025 North Tax Group. All rights reserved.</p>
