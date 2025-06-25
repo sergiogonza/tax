@@ -132,6 +132,10 @@
     </div>
   </div>
 
+
+
+  
+
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzNG2FLpZPbzcgBTMnGO9cx5-OUVOzZ2TvCg5JgNsxX40vIEcBiLYTWRrVjQGVBJNKe/exec'; // Cambia esto con tu URL real
     const form = document.getElementById('leadForm');
@@ -142,15 +146,20 @@
       e.preventDefault();
       const formData = new FormData(form);
 
-      fetch(scriptURL, { method: 'POST', body: formData })
-        .then(response => {
-          message.innerHTML = '';
-          form.reset();
-          popup.style.display = 'flex';
-        })
-        .catch(error => {
-          message.innerHTML = '<span style="color:red">Ocurrió un error. Intenta nuevamente.</span>';
-        });
+      fetch(scriptURL, {
+  method: 'POST',
+  mode: 'no-cors', // ← esto evita el error de CORS
+  body: formData
+})
+.then(() => {
+  message.innerHTML = '';
+  form.reset();
+  popup.style.display = 'flex';
+})
+.catch(error => {
+  message.innerHTML = '<span style="color:red">Ocurrió un error. Intenta nuevamente.</span>';
+});
+
     });
   </script>
 </body>
